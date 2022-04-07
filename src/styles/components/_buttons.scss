@@ -1,0 +1,96 @@
+.btn {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: .5rem .75rem;
+
+    transition-timing-function: linear;
+    transition-duration: 0.1s;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        color: darken($color: white, $amount: 10);
+    }
+}
+
+.btn-primary {
+    background-color: $primary;
+    border-radius: .2rem;
+
+    &:disabled {
+        background-color: lighten($color: $primary, $amount: 15);
+    }
+
+    &:hover {
+        background-color: darken($color: $primary, $amount: 20);
+    }
+}
+
+.btn-danger {
+    background-color: red;
+
+    &:hover {
+        background-color: darken($color: red, $amount: 20);
+    }
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.google-btn {
+    cursor: pointer;
+    margin-top: .3rem;
+    width: 100%;
+    height: 2.75rem;
+    background-color: $google-blue;
+    border-radius: .1rem;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+    transition: box-shadow .3s ease;
+
+    .google-icon-wrapper {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        border: 1px solid $google-blue;
+        height: 100%;
+        aspect-ratio: 1;
+        border-radius: .1rem;
+        background-color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .google-icon {
+        $size-icon: 1.5rem;
+        width: $size-icon;
+        height: $size-icon;
+    }
+
+    .btn-text {
+        color: $white;
+        font-size: 14px;
+        letter-spacing: 0.2px;
+        width: 100%;
+        text-align: center;
+    }
+
+    &:hover {
+        box-shadow: 0 0 6px $google-blue;
+    }
+
+    &:active {
+        background: $button-active-blue;
+    }
+}

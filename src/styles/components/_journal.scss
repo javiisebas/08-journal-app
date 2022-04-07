@@ -1,0 +1,84 @@
+.journal-main-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.journal-main-sidebar {
+    background-color: $dark-grey;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 1rem;
+    width: 30%;
+}
+
+.journal-sidebar-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.journal-sidebar-navbar h3 {
+    font-weight: lighter;
+}
+
+.journal-new-entry {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    cursor: pointer;
+
+    transition-timing-function: ease;
+    transition-duration: .2s;
+
+    &:hover {
+        color: darken($color: white, $amount: 20);
+    }
+}
+
+.journal-entries {
+    margin-top: 2rem;
+    flex: 1 1 auto;
+    overflow: auto;
+}
+
+.journal-entry {
+    background-color: white;
+    border-radius: .25rem;
+    color: $dark-grey;
+    display: flex;
+    margin-bottom: .75rem;
+    overflow: hidden;
+    width: 100%;
+}
+
+.journal-entry-picture {
+    height: 5rem;
+    aspect-ratio: 1;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.journal-entry-body {
+    padding: .75rem;
+}
+
+.journal-entry-title {
+    font-size: .75rem !important;
+    font-weight: bold;
+}
+
+.journal-entry-content {
+    font-size: .5rem;
+}
+
+.journal-entry-date-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
